@@ -12,32 +12,47 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-12 mt-5">
-                <h1>Dice Roller</h1>
+        <div class="row title-height" >
+            <div id= "title-col" class="col-12">
+                <p id="app-title">Dice Roller</p>
             </div>                    
         </div>
-        <div class="row">
-            <div class="col-xl-6 mt-5">
-                <i class="fas fa-dice-one"></i>
-                <i class="fas fa-dice-two"></i>
-                <i class="fas fa-dice-three"></i>
-                <i class="fas fa-dice-four"></i>
-                <i class="fas fa-dice-five"></i>
-                <i class="fas fa-dice-six"></i>
-            </div>
-            <div class="col-xl-6 mt-5">
-                <i class="fas fa-dice-one"></i>
-                <i class="fas fa-dice-two"></i>
-                <i class="fas fa-dice-three"></i>
-                <i class="fas fa-dice-four"></i>
-                <i class="fas fa-dice-five"></i>
-                <i class="fas fa-dice-six"></i>
+        <div class="row dice-height">
+            <div id="dice-col" class="col-12">
+                <i id="app-dice" class="fas fa-dice mt-2"></i>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-12 mt-5">
-                <button id="rollButton" type="button" class="btn btn-dark btn-lg">Roll</button>
+        <div class="row text-height">
+            <div id="side-col" class="col-12">
+                <p> Number of Sides </p>
+                <select class="form-control mt-4">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+        </div>
+        <div class="row text-height">
+            <div class="col-12">
+                <p> Number of Dice </p>
+                <select class="form-control mt-4">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-2 button-height">
+            <div class="col-12">
+                <button type="button" class="btn btn-dark btn-lg">Roll</button>
             </div>
         </div>
     </div>
