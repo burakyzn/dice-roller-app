@@ -25,34 +25,44 @@
         <div class="row text-height">
             <div id="side-col" class="col-12">
                 <p class="info-text"> Number of Sides </p>
-                <select class="form-control mt-4">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
+                <select id="firstDown" class="form-control mt-4">
                 </select>
             </div>
         </div>
         <div class="row text-height">
             <div class="col-12">
                 <p class="info-text"> Number of Dice </p>
-                <select class="form-control mt-4">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
+                <select id="secondDown" class="form-control mt-4">
                 </select>
             </div>
         </div>
         <div class="row mt-2 button-height">
             <div class="col-12">
                 <button id="rollButton"type="button" class="btn btn-dark btn-lg">Roll</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+    
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Result</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+    
+                <!-- Modal body -->
+                <div id="modal-body" class="modal-body">
+                    
+                </div>
+    
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+    
             </div>
         </div>
     </div>
