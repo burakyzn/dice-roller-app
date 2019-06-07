@@ -30,27 +30,27 @@ html, body, .container-fluid{
 }
 
 @media screen and (max-width: 767px) {
-    .col-12 p{
+    .info-text{
         font-size:35px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .col-12 p{
+    .info-text{
         font-size:45px;
     }
 }
 
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    .col-12 p{
+    .info-text{
         font-size:55px;
     }
 }
 
 
 @media screen and (min-width: 1200px) {
-    .col-12 p{
+    .info-text{
         font-size:65px;
     }
 }
