@@ -33,10 +33,22 @@ html, body, .container-fluid{
     .info-text{
         font-size:35px;
     }
+    .app-dice{
+        font-size: 80px;
+    }
+    .app-title{
+        font-size:35px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .info-text{
+        font-size:45px;
+    }
+    .app-dice{
+        font-size: 100px;
+    }
+    .app-title{
         font-size:45px;
     }
 }
@@ -46,11 +58,23 @@ html, body, .container-fluid{
     .info-text{
         font-size:55px;
     }
+    .app-dice{
+        font-size: 120px;
+    }
+    .app-title{
+        font-size:55px;
+    }
 }
 
 
 @media screen and (min-width: 1200px) {
     .info-text{
+        font-size:55px;
+    }
+    .app-dice{
+        font-size: 120px;
+    }
+    .app-title{
         font-size:65px;
     }
 }
