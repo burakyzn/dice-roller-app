@@ -43,5 +43,5 @@ $('#rollButton').click(function (e) {
 
     modal_body.innerHTML = 'Result : ' + result + '<br>' + 'Total : '+ total + '<br>' + 'Average : ' + average;
 
-    $('#myModal').modal('show');
+    $('.modal').modal('show');
 });
