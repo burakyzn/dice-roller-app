@@ -6,16 +6,7 @@ $(document).ready(function () {
     setup();
 });
 
-function setup(){
-    var dice_col_height = $('#dice-col').css('height');
-    var dice_height = (parseFloat(dice_col_height) - 50) + 'px'; 
-    $('#app-dice').css('font-size', dice_height);
-
-    var title_col_height = $('#title-col').css('height');
-    var title_height = (parseFloat(title_col_height) - 20) + 'px';
-    $('#app-title').css('font-size', title_height);
-
-   
+function setup(){   
     for(var i = 0; i<10;i++){
         var newOption = document.createElement('option');
         newOption.value = i+1;
