@@ -1,6 +1,6 @@
 const first_down = document.querySelector('#firstDown');
 const second_down = document.querySelector('#secondDown');
-const modal_body = document.querySelector('#modal-body')
+const modal_content = document.querySelector('.modal-content')
 
 $(document).ready(function () {
     setup();
@@ -41,7 +41,12 @@ $('#rollButton').click(function (e) {
 
     var average = total / result_arr.length;
 
-    modal_body.innerHTML = 'Result : ' + result + '<br>' + 'Total : '+ total + '<br>' + 'Average : ' + average;
-
     $('.modal').modal('show');
+
+    modal_content.innerHTML = '<div class="text-center my-auto"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>';
+
+    setTimeout(function(){
+        modal_content.innerHTML = '<div class="modal-header"><h4 class="modal-title">Result</h4><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"> Result : ' + result + '<br>' + 'Total : '+ total + '<br>' + 'Average : ' + average + '</div><div class="modal-footer"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></div>';
+    },3000);
+
 });
