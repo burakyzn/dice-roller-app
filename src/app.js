@@ -1,6 +1,7 @@
-const first_down = document.querySelector('#firstDown');
-const second_down = document.querySelector('#secondDown');
-const modal_body = document.querySelector('.modal-body')
+const select_box = document.querySelector('.form-control');
+const modal_body = document.querySelector('.modal-body');
+const container = document.querySelector('.container-fluid');
+const imageList = ['d4','d6','d8','d10','d12','d20','d50','d100'];
 
 $(document).ready(function () {
     setup();
@@ -11,9 +12,20 @@ function setup(){
         var newOption = document.createElement('option');
         newOption.value = i+1;
         newOption.innerHTML = i+1;
-        second_down.appendChild(newOption);
+        select_box.appendChild(newOption);
     }
 }
+
+container.addEventListener('click',function(event){
+
+    if(event.target.id != ''){
+        for(var i = 0; i < 8; i++){
+            document.querySelector('#' + imageList[i]).classList.remove('dice-selected');
+        }
+        document.querySelector('#' + event.target.id).classList.add('dice-selected');
+    }
+})
+
 
 $('#rollButton').click(function (e) { 
     // var number_of_side = first_down.value;

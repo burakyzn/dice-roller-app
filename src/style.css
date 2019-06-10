@@ -93,3 +93,8 @@ html, body, .container-fluid{
 .dice-effect-cont{
     text-align: center;
 }
+
+.dice-selected{
+    border:2px solid gray; 
+    border-radius: 20px;
+}
