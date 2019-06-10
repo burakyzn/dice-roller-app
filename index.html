@@ -12,33 +12,56 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row title-height" >
-            <div class="col-12">
-                <p class="app-title mb-4">Dice Roller</p>
+        <div class="row title-height">
+            <div class="col-12 my-auto">
+                <p class="app-title">Dice Roller</p>
             </div>                    
         </div>
-        <div class="row dice-height mt-2">
-            <div class="col-12">
-                <i class="fas fa-dice app-dice"></i>
+        <div class="row dice-height">
+            <div class="col-4 my-auto">
+                <img class="dice-img" src="./src/img/d4.png" alt="">
+            </div>
+            <div class="col-4 my-auto">
+                <img class="dice-img" src="./src/img/d6.png" alt="">
+            </div>
+            <div class="col-4 my-auto">
+                <img class="dice-img" src="./src/img/d8.png" alt="">
             </div>
         </div>
-        <div class="row text-height">
-            <div id="side-col" class="col-12">
-                <p class="info-text"> Number of Sides </p>
-                <select id="firstDown" class="form-control">
-                </select>
+        <div class="row dice-height">
+            <div class="col-4 my-auto">
+                <img class="dice-img" src="./src/img/d10.png" alt="">
+            </div>
+            <div class="col-4 my-auto">
+                <img class="dice-img" src="./src/img/d12.png" alt="">
+            </div>
+            <div class="col-4 my-auto">
+                <img class="dice-img" src="./src/img/d20.png" alt="">
+            </div>
+        </div>
+        <div class="row dice-height">
+            <div class="col-4 my-auto">
+                <img class="dice-img" src="./d12.png" alt="">
+            </div>
+            <div class="col-4 my-auto">
+                <img class="dice-img" src="./d12.png" alt="">
+            </div>
+            <div class="col-4 my-auto">
+                <img class="dice-img" src="./d12.png" alt="">
             </div>
         </div>
         <div class="row text-height mt-3">
-            <div class="col-12">
-                <p class="info-text"> Number of Dice </p>
-                <select id="secondDown" class="form-control">
-                </select>
+            <div class="col-6 my-auto">
+                <div class="mx-auto"><p class="info-text">Dice</p></div>
+            </div>
+            <div class="col-6 my-auto">
+                <div><select id="secondDown" class="form-control">
+                </select> </div>
             </div>
         </div>
-        <div class="row mt-2 button-height">
-            <div class="col-12">
-                <button id="rollButton"type="button" class="btn btn-dark btn-lg">Roll</button>
+        <div class="row button-height">
+            <div class="col-12 my-auto">
+                <button id="rollButton" type="button" class="btn btn-dark btn-lg">Roll</button>
             </div>
         </div>
     </div>

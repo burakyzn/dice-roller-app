@@ -13,16 +13,20 @@ html, body, .container-fluid{
     width: 100%;
 }
 
-.dice-height{
-    height: 20%;
+.col-4{
+    text-align: center;
+    width: 100%;
 }
-
 .title-height{
     height : 10%;
 }
 
+.dice-height{
+    height: 22%;
+}
+
 .text-height{
-    height: 25%;
+    height: 10%;
 }
 
 .button-height{
@@ -33,11 +37,8 @@ html, body, .container-fluid{
     .info-text{
         font-size:35px;
     }
-    .app-dice{
-        font-size: 80px;
-    }
     .app-title{
-        font-size:35px;
+        font-size:45px;
     }
 }
 
@@ -45,11 +46,8 @@ html, body, .container-fluid{
     .info-text{
         font-size:45px;
     }
-    .app-dice{
-        font-size: 100px;
-    }
     .app-title{
-        font-size:45px;
+        font-size:55px;
     }
 }
 
@@ -57,22 +55,6 @@ html, body, .container-fluid{
 @media (min-width: 992px) and (max-width: 1199px) {
     .info-text{
         font-size:55px;
-    }
-    .app-dice{
-        font-size: 120px;
-    }
-    .app-title{
-        font-size:55px;
-    }
-}
-
-
-@media screen and (min-width: 1200px) {
-    .info-text{
-        font-size:55px;
-    }
-    .app-dice{
-        font-size: 120px;
     }
     .app-title{
         font-size:65px;
@@ -93,38 +75,7 @@ html, body, .container-fluid{
     border: none; 
 }
 
-.lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 64px;
-    height: 64px;
-  }
-  .lds-ring div {
-    box-sizing: border-box;
+.dice-img{
+    width: 100%;
     display: block;
-    position: absolute;
-    width: 51px;
-    height: 51px;
-    margin: 6px;
-    border: 6px solid black;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color:black transparent transparent transparent;
-  }
-  .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-  .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-  .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+}
