@@ -1,6 +1,6 @@
 const first_down = document.querySelector('#firstDown');
 const second_down = document.querySelector('#secondDown');
-// const modal_content = document.querySelector('.modal-content')
+const modal_body = document.querySelector('.modal-body')
 
 $(document).ready(function () {
     setup();
@@ -34,12 +34,12 @@ $('#rollButton').click(function (e) {
 
     // var average = total / result_arr.length;
 
-    // $('.modal').modal('show');
+    $('.modal').modal('show');
 
-    // modal_content.innerHTML = '<div class="text-center my-auto"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>';
+    modal_body.innerHTML = '<div class="dice-effect-cont"><span class="dice-effect"></span></div>';
 
-    // setTimeout(function(){
-    //     modal_content.innerHTML = '<div class="modal-header"><h4 class="modal-title">Result</h4><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"> Result : ' + result + '<br>' + 'Total : '+ total + '<br>' + 'Average : ' + average + '</div><div class="modal-footer"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></div>';
-    // },3000);
+    setTimeout(function(){
+        modal_body.innerHTML = '<div>test</div>';
+    },2000);
 
 });

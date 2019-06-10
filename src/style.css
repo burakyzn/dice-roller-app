@@ -31,6 +31,7 @@ html, body, .container-fluid{
 
 .button-height{
     height : 10%;
+    bottom:0;
 }
 
 @media screen and (max-width: 767px) {
@@ -51,7 +52,6 @@ html, body, .container-fluid{
     }
 }
 
-
 @media (min-width: 992px) and (max-width: 1199px) {
     .info-text{
         font-size:55px;
@@ -61,21 +61,35 @@ html, body, .container-fluid{
     }
 }
 
-.modal.modal-fullscreen .modal-dialog {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    max-width: none; }
-  
-.modal.modal-fullscreen .modal-content {
-    height: auto;
-    min-height: 100%;
-    border-radius: 0;
-    border: none; 
-}
-
 .dice-img{
     width: 100%;
     display: block;
+}
+
+.dice-effect {
+    font-size: 100px;
+    font-weight: 800;
+  }
+
+.dice-effect::after {
+    content:'';
+    animation: rolling 1s linear infinite;
+}
+  
+@keyframes rolling {
+    0% {content:'\2680';}
+    20% {content:'\2681';}
+    40% {content:'\2682';}
+    60% {content:'\2683';}
+    80% {content:'\2684';}
+    100% {content:'\2685';}
+}
+
+.modalCenter{
+    top:50% !important;
+    transform:translateY(-50%) !important;
+}
+
+.dice-effect-cont{
+    text-align: center;
 }
