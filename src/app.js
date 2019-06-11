@@ -3,6 +3,9 @@ const modal_body = document.querySelector('.modal-body');
 const container = document.querySelector('.container-fluid');
 var lastSelectedID = '';
 var selectedID = '';
+var result = '';
+var total_result = 0;
+var average = 0;
 
 $(document).ready(function () {
     for(var i = 0; i<50;i++){
@@ -28,15 +31,26 @@ container.addEventListener('click',function(event){
     }
 
     if(event.target.type == 'button'){
+        $('.modal').modal('show');
+
         if(selectedID != ''){
-            $('.modal').modal('show');
+            result = '';
+            total_result = 0;
+
+            for(var i=0;i<select_box.value;i++){
+                var randomResult = Math.floor(Math.random() * selectedID.substring(1)) + 1;
+                result += randomResult + ' ';
+                total_result += randomResult;
+            }
+
+            average = total_result / select_box.value;
 
             setTimeout(function () {
-                modal_body.innerHTML = '<div class="modal-cont">test</div>';
-            }, 2000);
+                modal_body.innerHTML = '<div class="result-numbers">' + result + '</div><div class="total-result">' + total_result + '</div><div class="result-numbers">' + average + '</div>';
+            }, 1000);
             
         } else {
-            console.log('zar secilmedi!');
+            modal_body.innerHTML = '<div class="result-numbers"> Please select the dice </div>'
         }
     }
 })
