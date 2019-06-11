@@ -124,3 +124,13 @@ html, body, .container-fluid{
               transform: rotate(360deg);
     }
 }
+
+.result-numbers{
+    font-size:20px;
+    text-align: center;
+}
+
+.total-result{
+    text-align: center;
+    font-size:50px;
+}
