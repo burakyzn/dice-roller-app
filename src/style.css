@@ -75,11 +75,6 @@ html, body, .container-fluid{
     display: block;
 }
 
-.modalCenter{
-    top:50% !important;
-    transform:translateY(-50%) !important;
-}
-
 .modal-cont{
     text-align: center;
 }
@@ -91,7 +86,22 @@ html, body, .container-fluid{
 
 .rotate-dice-center {
 	-webkit-animation: rotate-center 2s linear infinite;;
-	        animation: rotate-center 2s linear infinite;
+	        animation: rotate-center s linear infinite;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+.vertical-align-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-content {
+    width:inherit;
+    height:inherit;
+    margin: 0 auto;
 }
 
 @-webkit-keyframes rotate-center {
