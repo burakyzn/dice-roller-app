@@ -41,6 +41,9 @@ html, body, .container-fluid{
     .app-title{
         font-size:45px;
     }
+    i{
+        font-size:100px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -49,6 +52,9 @@ html, body, .container-fluid{
     }
     .app-title{
         font-size:55px;
+    }
+    i{
+        font-size:100px;
     }
 }
 
@@ -59,6 +65,9 @@ html, body, .container-fluid{
     .app-title{
         font-size:65px;
     }
+    i{
+        font-size:100px;
+    }
 }
 
 .dice-img{
@@ -66,35 +75,42 @@ html, body, .container-fluid{
     display: block;
 }
 
-.dice-effect {
-    font-size: 100px;
-    font-weight: 800;
-  }
-
-.dice-effect::after {
-    content:'';
-    animation: rolling 1s linear infinite;
-}
-  
-@keyframes rolling {
-    0% {content:'\2680';}
-    20% {content:'\2681';}
-    40% {content:'\2682';}
-    60% {content:'\2683';}
-    80% {content:'\2684';}
-    100% {content:'\2685';}
-}
-
 .modalCenter{
     top:50% !important;
     transform:translateY(-50%) !important;
 }
 
-.dice-effect-cont{
+.modal-cont{
     text-align: center;
 }
 
 .dice-selected{
     border:2px solid gray; 
     border-radius: 20px;
+}
+
+.rotate-dice-center {
+	-webkit-animation: rotate-center 2s linear infinite;;
+	        animation: rotate-center 2s linear infinite;
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+@keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
 }
