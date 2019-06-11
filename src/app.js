@@ -33,7 +33,7 @@ container.addEventListener('click',function(event){
 
             setTimeout(function () {
                 modal_body.innerHTML = '<div class="modal-cont">test</div>';
-            }, 1000);
+            }, 2000);
             
         } else {
             console.log('zar secilmedi!');
