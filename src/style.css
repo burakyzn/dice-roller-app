@@ -5,7 +5,7 @@ html, body, .container-fluid{
 }
 
 .col-12{
-    text-align:center;
+    text-align: center;
     width: 100%;
 }
 
@@ -17,6 +17,7 @@ html, body, .container-fluid{
     text-align: center;
     width: 100%;
 }
+
 .title-height{
     height : 10%;
 }
@@ -32,69 +33,6 @@ html, body, .container-fluid{
 .button-height{
     height : 10%;
     bottom:0;
-}
-
-@media screen and (max-width: 767px) {
-    .info-text{
-        font-size:35px;
-    }
-    .app-title{
-        font-size:45px;
-    }
-    i{
-        font-size:70px;
-    }
-    .result-numbers{
-        font-size:25px;
-        text-align: center;
-    }
-    
-    .total-result{
-        text-align: center;
-        font-size:55px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .info-text{
-        font-size:45px;
-    }
-    .app-title{
-        font-size:55px;
-    }
-    i{
-        font-size:100px;
-    }
-    .result-numbers{
-        font-size:40px;
-        text-align: center;
-    }
-    
-    .total-result{
-        text-align: center;
-        font-size:80px;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .info-text{
-        font-size:55px;
-    }
-    .app-title{
-        font-size:65px;
-    }
-    i{
-        font-size:100px;
-    }
-    .result-numbers{
-        font-size:50px;
-        text-align: center;
-    }
-    
-    .total-result{
-        text-align: center;
-        font-size:90px;
-    }
 }
 
 .dice-img{
@@ -151,4 +89,48 @@ html, body, .container-fluid{
               transform: rotate(360deg);
     }
 }
+
+
+@media screen and (max-width: 767px) {
+    .info-text{
+        font-size:40px;
+    }
+    .app-title{
+        font-size:40px;
+    }
+    i{
+        font-size:70px;
+    }
+    .result-numbers{
+        font-size:25px;
+        text-align: center;
+    }
+    
+    .total-result{
+        text-align: center;
+        font-size:55px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .info-text{
+        font-size:60px;
+    }
+    .app-title{
+        font-size:60px;
+    }
+    i{
+        font-size:120px;
+    }
+    .result-numbers{
+        font-size:40px;
+        text-align: center;
+    }
+    
+    .total-result{
+        text-align: center;
+        font-size:80px;
+    }
+}
+
 

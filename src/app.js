@@ -1,7 +1,9 @@
 const select_box = document.querySelector('.form-control');
-const modal_body = document.querySelector('.modal-body');
+const result_modal_body = document.querySelector('.result');
 const container = document.querySelector('.container-fluid');
 const button = document.querySelector('.btn');
+const plus = document.querySelector('#plus');
+const new_dice_close = document.querySelector('.new-close');
 var lastSelectedID = '';
 var selectedID = '';
 var result = '';
@@ -18,10 +20,9 @@ $(document).ready(function () {
 });
 
 container.addEventListener('click',function(event){
-
-    if(event.target.id != '' && event.target.classList[0] != 'btn'){
+    if(event.target.id != '' && event.target.classList[0] != 'btn' && event.target.id != 'plus'){
         document.querySelector('#' + event.target.id).classList.add('dice-selected');
-        modal_body.innerHTML = '<div class="modal-cont"><i class="fas fa-dice-six rotate-dice-center"></i></div>'
+        result_modal_body.innerHTML = '<div class="modal-cont"><i class="fas fa-dice-six rotate-dice-center"></i></div>'
 
         lastSelectedID = selectedID;
         selectedID = event.target.id;
@@ -32,7 +33,7 @@ container.addEventListener('click',function(event){
     }
 
     if(event.target.type == 'button'){
-        $('.modal').modal('show');
+        $('.res').modal('show');
         if(selectedID != ''){
             result = '';
             total_result = 0;
@@ -44,19 +45,33 @@ container.addEventListener('click',function(event){
             }
 
             average = total_result / select_box.value;
-
-           
+            
             setTimeout(function () {
-                modal_body.innerHTML = '<div class="result-numbers">' + result + '</div><div class="total-result">' + total_result + '</div><div class="result-numbers">' + average + '</div>';
+                result_modal_body.innerHTML = '<div class="result-numbers">' + result + '</div><div class="total-result">' + total_result + '</div><div class="result-numbers">' + average + '</div>';
             }, 1000);
             
         } else {
-            modal_body.innerHTML = '<div class="result-numbers"> Please select the dice </div>';
+            result_modal_body.innerHTML = '<div class="result-numbers"> Please select the dice </div>';
         }
+    }
+
+    if(event.target.id == 'plus'){
+        $('.set').modal('show');
     }
 })
 
 button.addEventListener('click',function(){
-    modal_body.innerHTML = '<div class="modal-cont"><i class="fas fa-dice-six rotate-dice-center"></i></div>'
+    result_modal_body.innerHTML = '<div class="modal-cont"><i class="fas fa-dice-six rotate-dice-center"></i></div>'
 })
 
+plus.addEventListener('click',function(){
+    
+})
+
+new_dice_close.addEventListener('click',function(){
+    var new_dice_temp = document.querySelector('#newdice');
+    if(new_dice_temp.value != ''){
+        plus.id = 'd' + new_dice_temp.value;
+        plus.src = './src/img/undefined.png';
+    }
+})
