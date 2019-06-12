@@ -1,9 +1,11 @@
 const select_box = document.querySelector('.form-control');
 const result_modal_body = document.querySelector('.result');
 const container = document.querySelector('.container-fluid');
-const button = document.querySelector('.btn');
+const roll_button = document.querySelector('.btn');
 const plus = document.querySelector('#plus');
 const new_dice_close = document.querySelector('.new-close');
+const error_message = document.querySelector('#error')
+var new_dice_text = document.querySelector('#newdice');
 var lastSelectedID = '';
 var selectedID = '';
 var result = '';
@@ -60,18 +62,38 @@ container.addEventListener('click',function(event){
     }
 })
 
-button.addEventListener('click',function(){
+roll_button.addEventListener('click',function(){
     result_modal_body.innerHTML = '<div class="modal-cont"><i class="fas fa-dice-six rotate-dice-center"></i></div>'
 })
 
-plus.addEventListener('click',function(){
-    
+new_dice_close.addEventListener('click',function(){
+    plus.id = 'd' + new_dice_text.value;
+    plus.src = './src/img/undefined.png';
 })
 
-new_dice_close.addEventListener('click',function(){
-    var new_dice_temp = document.querySelector('#newdice');
-    if(new_dice_temp.value != ''){
-        plus.id = 'd' + new_dice_temp.value;
-        plus.src = './src/img/undefined.png';
+new_dice_text.addEventListener('keyup',function(){
+    if(new_dice_text.value > 100 || new_dice_text.value < 0){
+        error_message.innerHTML = 'Write a number between 0 and 100.';
+        error_message.classList.remove('error-hide');
+        error_message.classList.add('error-show');
+        $('.new-close').prop('disabled', true);
+    } else if(new_dice_text.value == 4 || new_dice_text.value == 6 || new_dice_text.value == 8 || new_dice_text.value == 10 || new_dice_text.value == 12 || new_dice_text.value == 20 || new_dice_text.value == 50 || new_dice_text.value == 100) {
+        error_message.innerHTML = 'Enter a dice that does not exist';
+        error_message.classList.remove('error-hide');
+        error_message.classList.add('error-show');
+        $('.new-close').prop('disabled', true);
+    }  else {
+        error_message.classList.add('error-hide');
+        error_message.classList.remove('error-show');
+        $('.new-close').prop('disabled', false);
     }
 })
+
+function number_validation(e) {
+    islem = document.all ? window.event : e;
+    karakter = document.all ? islem.keyCode : islem.which;
+
+    if(karakter<48||karakter>57) {
+        if(document.all) { islem.returnValue = false; } else { islem.preventDefault();}
+    }
+}

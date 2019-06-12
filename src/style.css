@@ -133,4 +133,18 @@ html, body, .container-fluid{
     }
 }
 
+.error-hide{
+    display: none;
+}
 
+.error-show{
+    display: block;
+    color :Red;
+}
+
+input.disabled {
+    pointer-events:none;
+    color:#AAA;
+    background:#F5F5F5;
+    
+}
