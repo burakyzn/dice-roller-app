@@ -52,11 +52,11 @@
         </div>
         <div class="row text-height mt-3">
             <div class="col-6 my-auto">
-                <div class="mx-auto"><p class="info-text">Dice</p></div>
+                <p class="info-text">Dice</p>
             </div>
             <div class="col-6 my-auto">
-                <div><select class="form-control">
-                </select> </div>
+                <select class="form-control form-control-lg">
+                </select>
             </div>
         </div>
         <div class="row button-height">
@@ -72,7 +72,7 @@
                 <div class="modal-content">
                     <div class="modal-body result"></div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
                     </div>
                 </div>
             </div>
@@ -84,10 +84,10 @@
             <div class="modal-dialog vertical-align-center">
                 <div class="modal-content">
                     <div class="modal-body modal-cont">
-                        <span class="result-numbers">Sides of new dice  </span><div class="my-auto"><input type="text" name="newdice" id="newdice"></div>
+                        <div class="result-numbers">Sides of new dice</div><div><input type="text" name="newdice" id="newdice" onkeypress="number_validation(event)"></div><div id="error" class="error-hide"></div>  
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default new-close" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default new-close" data-dismiss="modal">OK</button>
                     </div>
                 </div>
             </div>
