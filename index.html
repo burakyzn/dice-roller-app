@@ -46,6 +46,9 @@
             <div class="col-4 my-auto">
                 <img id="d100" class="dice-img" src="./src/img/d100.png" alt="">
             </div>
+            <div class="col-4 my-auto">
+                <img id="plus" class="dice-img" src="./src/img/plus.png" alt="">
+            </div>
         </div>
         <div class="row text-height mt-3">
             <div class="col-6 my-auto">
@@ -63,13 +66,28 @@
         </div>
     </div>
 
-    <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="res modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="vertical-alignment-helper">
             <div class="modal-dialog vertical-align-center">
                 <div class="modal-content">
-                    <div class="modal-body"></div>
+                    <div class="modal-body result"></div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="set modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog vertical-align-center">
+                <div class="modal-content">
+                    <div class="modal-body modal-cont">
+                        <span class="result-numbers">Sides of new dice  </span><div class="my-auto"><input type="text" name="newdice" id="newdice"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default new-close" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
