@@ -9,6 +9,7 @@ const new_dice_text = document.querySelector('#newdice');
 const about_button = document.getElementById('about');
 const history_button = document.getElementById('history');
 const clear_button = document.querySelector('.clear');
+const modal_history = document.querySelector('.modal-history');
 var lastSelectedID = '';
 var selectedID = '';
 var result = '';
@@ -55,6 +56,11 @@ container.addEventListener('click',function(event){
             setTimeout(function () {
                 result_modal_body.innerHTML = '<div class="result-numbers">' + result + '</div><div class="total-result">' + total_result + '</div><div class="result-numbers">' + average + '</div>';
             }, 1000);
+
+            var new_dice_history = document.createElement('div');
+            new_dice_history.style = 'border : 1px solid black; margin-top : 3px;'
+            new_dice_history.innerHTML = '<div class="history-dice"><img src="./src/img/undefined.png" class="history-img"></div><div><p class="history-text">' + result +'</p><p class="history-text">'+ total_result +'</p><p class="history-text">' + average + '</p></div>'
+            modal_history.appendChild(new_dice_history);
             
         } else {
             result_modal_body.innerHTML = '<div class="result-numbers"> Please select the dice </div>';
@@ -92,5 +98,5 @@ history_button.addEventListener('click',function(){
 })
 
 clear_button.addEventListener('click',function(){
-    document.querySelector('.modal-history').innerHTML = '';
+    modal_history.innerHTML = '';
 })

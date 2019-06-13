@@ -169,3 +169,16 @@ input.disabled {
 .modal-button{
     width: 45%;
 }
+
+.history-text{
+    text-align:center;
+}
+
+.history-dice{
+    width: 100%;
+    text-align: center;
+}
+
+.history-img{
+    width: 25%;
+}
