@@ -1,7 +1,7 @@
 const select_box = document.querySelector('.form-control');
 const result_modal_body = document.querySelector('.result');
 const container = document.querySelector('.container-fluid');
-const roll_button = document.querySelector('.btn');
+const roll_button = document.querySelector('#roll');
 const plus = document.querySelector('#plus');
 const new_dice_close = document.querySelector('.new-close');
 const error_message = document.querySelector('#error')
@@ -13,8 +13,9 @@ var total_result = 0;
 var average = 0;
 
 $(document).ready(function () {
+    let newOption; 
     for(var i = 0; i<50;i++){
-        var newOption = document.createElement('option');
+        newOption = document.createElement('option');
         newOption.value = i+1;
         newOption.innerHTML = i+1;
         select_box.appendChild(newOption);
@@ -24,7 +25,6 @@ $(document).ready(function () {
 container.addEventListener('click',function(event){
     if(event.target.id != '' && event.target.classList[0] != 'btn' && event.target.id != 'plus'){
         document.querySelector('#' + event.target.id).classList.add('dice-selected');
-        result_modal_body.innerHTML = '<div class="modal-cont"><i class="fas fa-dice-six rotate-dice-center"></i></div>'
 
         lastSelectedID = selectedID;
         selectedID = event.target.id;
@@ -34,7 +34,8 @@ container.addEventListener('click',function(event){
         }
     }
 
-    if(event.target.type == 'button'){
+    if(event.target.id == 'roll'){
+        result_modal_body.innerHTML = '<div class="modal-cont"><i class="fas fa-dice-six rotate-dice-center"></i></div>'
         $('.res').modal('show');
         if(selectedID != ''){
             result = '';
@@ -62,38 +63,22 @@ container.addEventListener('click',function(event){
     }
 })
 
-roll_button.addEventListener('click',function(){
-    result_modal_body.innerHTML = '<div class="modal-cont"><i class="fas fa-dice-six rotate-dice-center"></i></div>'
-})
-
 new_dice_close.addEventListener('click',function(){
     plus.id = 'd' + new_dice_text.value;
     plus.src = './src/img/undefined.png';
 })
 
-new_dice_text.addEventListener('keyup',function(){
+new_dice_text.addEventListener('keyup',function(event){
     if(new_dice_text.value > 100 || new_dice_text.value < 0){
-        error_message.innerHTML = 'Write a number between 0 and 100.';
         error_message.classList.remove('error-hide');
         error_message.classList.add('error-show');
         $('.new-close').prop('disabled', true);
-    } else if(new_dice_text.value == 4 || new_dice_text.value == 6 || new_dice_text.value == 8 || new_dice_text.value == 10 || new_dice_text.value == 12 || new_dice_text.value == 20 || new_dice_text.value == 50 || new_dice_text.value == 100) {
-        error_message.innerHTML = 'Enter a dice that does not exist';
-        error_message.classList.remove('error-hide');
-        error_message.classList.add('error-show');
-        $('.new-close').prop('disabled', true);
-    }  else {
+    } else if('0123456789'.indexOf(event.key) == -1){
+        new_dice_text.value = new_dice_text.value.substring(0,new_dice_text.value.length - 1)
+    } else {
         error_message.classList.add('error-hide');
         error_message.classList.remove('error-show');
         $('.new-close').prop('disabled', false);
     }
 })
 
-function number_validation(e) {
-    islem = document.all ? window.event : e;
-    karakter = document.all ? islem.keyCode : islem.which;
-
-    if(karakter<48||karakter>57) {
-        if(document.all) { islem.returnValue = false; } else { islem.preventDefault();}
-    }
-}
