@@ -165,3 +165,7 @@ input.disabled {
 .modal-full .modal-content {
     min-height: 100vh;
 }
+
+.modal-button{
+    width: 45%;
+}
