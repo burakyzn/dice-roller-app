@@ -13,6 +13,14 @@ html, body, .container-fluid{
     width: 100%;
 }
 
+.col-6{
+    text-align: center;
+    width: 100%;
+}
+.col-6 button{
+    width: 100%;
+}
+
 .col-4{
     text-align: center;
     width: 100%;
