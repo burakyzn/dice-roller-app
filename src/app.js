@@ -5,7 +5,9 @@ const roll_button = document.querySelector('#roll');
 const plus = document.querySelector('#plus');
 const new_dice_close = document.querySelector('.new-close');
 const error_message = document.querySelector('#error')
-var new_dice_text = document.querySelector('#newdice');
+const new_dice_text = document.querySelector('#newdice');
+const about_button = document.getElementById('about');
+const history_button = document.getElementById('history');
 var lastSelectedID = '';
 var selectedID = '';
 var result = '';
@@ -13,9 +15,8 @@ var total_result = 0;
 var average = 0;
 
 $(document).ready(function () {
-    let newOption; 
     for(var i = 0; i<50;i++){
-        newOption = document.createElement('option');
+        var newOption = document.createElement('option');
         newOption.value = i+1;
         newOption.innerHTML = i+1;
         select_box.appendChild(newOption);
@@ -68,13 +69,11 @@ new_dice_close.addEventListener('click',function(){
     plus.src = './src/img/undefined.png';
 })
 
-new_dice_text.addEventListener('keyup',function(event){
+new_dice_text.addEventListener('keyup',function(e){
     if(new_dice_text.value > 100 || new_dice_text.value < 0){
         error_message.classList.remove('error-hide');
         error_message.classList.add('error-show');
         $('.new-close').prop('disabled', true);
-    } else if('0123456789'.indexOf(event.key) == -1){
-        new_dice_text.value = new_dice_text.value.substring(0,new_dice_text.value.length - 1)
     } else {
         error_message.classList.add('error-hide');
         error_message.classList.remove('error-show');
@@ -82,3 +81,10 @@ new_dice_text.addEventListener('keyup',function(event){
     }
 })
 
+about_button.addEventListener('click',function(){
+    $('.about').modal('show');
+})
+
+history_button.addEventListener('click',function(){
+    $('.history').modal('show');
+})
