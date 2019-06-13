@@ -8,11 +8,13 @@ const error_message = document.querySelector('#error')
 const new_dice_text = document.querySelector('#newdice');
 const about_button = document.getElementById('about');
 const history_button = document.getElementById('history');
+const clear_button = document.querySelector('.clear');
 var lastSelectedID = '';
 var selectedID = '';
 var result = '';
 var total_result = 0;
 var average = 0;
+
 
 $(document).ready(function () {
     for(var i = 0; i<50;i++){
@@ -87,4 +89,8 @@ about_button.addEventListener('click',function(){
 
 history_button.addEventListener('click',function(){
     $('.history').modal('show');
+})
+
+clear_button.addEventListener('click',function(){
+    document.querySelector('.modal-history').innerHTML = '';
 })
