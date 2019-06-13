@@ -12,11 +12,6 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row title-height">
-            <div class="col-12 my-auto">
-                <p class="app-title">Dice Roller</p>
-            </div>                    
-        </div>
         <div class="row dice-height">
             <div class="col-4 my-auto">
                 <img id="d4" class="dice-img" src="./src/img/d4.png" alt="">
@@ -64,6 +59,14 @@
                 <button id="roll" type="button" class="btn btn-dark btn-lg">Roll</button>
             </div>
         </div>
+        <div class="row title-height">
+            <div class="col-6 my-auto">
+                <button id="about" type="button" class="btn btn-dark btn-lg">About</button>
+            </div>
+            <div class="col-6 my-auto">
+                <button id="history" type="button" class="btn btn-dark btn-lg">History</button>
+            </div>                  
+        </div>
     </div>
 
     <div class="res modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -84,10 +87,40 @@
             <div class="modal-dialog vertical-align-center">
                 <div class="modal-content">
                     <div class="modal-body modal-cont">
-                        <div class="result-numbers">Sides of new dice</div><div><input type="text" name="newdice" id="newdice" onkeypress="number_validation(event)"></div><div id="error" class="error-hide"></div>  
+                        <div class="result-numbers">Sides of new dice</div><div><input type="text" name="newdice" id="newdice" onkeypress="number_validation(event)"></div><div id="error" class="error-hide">Write a number between 0 and 100.</div>  
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default new-close" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-full vertical-align-center">
+                <div class="modal-content">
+                    <div class="modal-body modal-cont">
+                        About Page
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark btn-lg" data-dismiss="modal">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="history modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-full vertical-align-center">
+                <div class="modal-content">
+                    <div class="modal-body modal-cont">
+                        History Page
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark btn-lg" data-dismiss="modal">Back</button>
                     </div>
                 </div>
             </div>
