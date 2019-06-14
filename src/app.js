@@ -58,7 +58,7 @@ container.addEventListener('click',function(event){
             }, 1000);
 
             var new_dice_history = document.createElement('div');
-            new_dice_history.style = 'border : 1px solid black; margin-top : 3px;'
+            new_dice_history.classList.add('history-dice-con');
             new_dice_history.innerHTML = '<div class="history-dice"><img src="./src/img/undefined.png" class="history-img"></div><div><p class="history-text">' + result +'</p><p class="history-text">'+ total_result +'</p><p class="history-text">' + average + '</p></div>'
             modal_history.appendChild(new_dice_history);
             
