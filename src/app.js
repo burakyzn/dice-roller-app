@@ -39,7 +39,7 @@ container.addEventListener('click',function(event){
     }
 
     if(event.target.id == 'roll'){
-        result_modal_body.innerHTML = '<div class="modal-cont"><i class="fas fa-dice-six rotate-dice-center"></i></div>'
+        result_modal_body.innerHTML = '<div class="dice-cont"><img class="rotate-dice-center" style="width: 100%;" src="./src/img/dice.png"></div>'
         $('.res').modal('show');
         if(selectedID != ''){
             result = '';

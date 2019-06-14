@@ -26,8 +26,10 @@ html, body, .container-fluid{
     width: 100%;
 }
 
-.title-height{
+.bottom-height{
     height : 10%;
+    bottom : 10px;
+    position: absolute;
 }
 
 .dice-height{
@@ -50,6 +52,11 @@ html, body, .container-fluid{
 
 .modal-cont{
     text-align: center;
+}
+
+.dice-cont{
+    width: 20%;
+    margin : 0 auto;
 }
 
 .dice-selected{
