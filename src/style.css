@@ -118,6 +118,37 @@ html, body, .container-fluid{
         text-align: center;
         font-size:55px;
     }
+
+    .about-app-title{
+        font-size:30px;
+    }
+    
+    .about-version{
+        font-size:25px;
+    }
+    
+    .about-developer{
+        font-size:20px;
+    }
+    
+    .about-description{
+        font-size:16px;
+    }
+    
+    .about-licence-con{
+        border : 2px solid black;
+        margin-top : 5px;
+    }
+    
+    .about-licence{
+        font-size:20px;
+    }
+    
+    .history-text{
+        text-align:center;
+        font-size:20px;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -139,7 +170,92 @@ html, body, .container-fluid{
         text-align: center;
         font-size:80px;
     }
+
+    .about-app-title{
+        font-size:70px;
+    }
+    
+    .about-version{
+        font-size:60px;
+    }
+    
+    .about-developer{
+        font-size:40px;
+    }
+    
+    .about-description{
+        font-size:35px;
+    }
+    
+    .about-licence-con{
+        border : 2px solid black;
+        margin-top : 5px;
+    }
+    
+    .about-licence{
+        font-size:50px;
+    }
+
+    .history-text{
+        font-size:40px;
+        text-align:center;
+    }
 }
+
+@media (min-width: 991px){
+    .info-text{
+        font-size:100px;
+    }
+    .app-title{
+        font-size:60px;
+    }
+    i{
+        font-size:120px;
+    }
+    .result-numbers{
+        font-size:40px;
+        text-align: center;
+    }
+    
+    .total-result{
+        text-align: center;
+        font-size:80px;
+    }
+
+    .about-app-title{
+        font-size:70px;
+    }
+    
+    .about-version{
+        font-size:60px;
+    }
+    
+    .about-developer{
+        font-size:40px;
+    }
+    
+    .about-description{
+        font-size:35px;
+    }
+    
+    .about-licence-con{
+        border : 2px solid black;
+        margin-top : 5px;
+    }
+    
+    .about-licence{
+        font-size:50px;
+    }
+    .history-text{
+        font-size:50px;
+        text-align:center;
+    }
+}
+
+.history-img{
+    width: 25%;
+}
+
 
 .error-hide{
     display: none;
@@ -170,20 +286,13 @@ input.disabled {
     width: 45%;
 }
 
-.history-text{
-    text-align:center;
-}
-
 .history-dice{
     width: 100%;
     text-align: center;
-}
-
-.history-img{
-    width: 25%;
 }
 
 .history-dice-con{
     border : 1px solid black;
     margin-top : 3px;
 }
+
