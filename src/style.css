@@ -26,6 +26,7 @@ html, body, .container-fluid{
 
 .row.header {
     height: calc( 100% - 170px);
+    margin-top:2px
 }
 
 .row.footer {
@@ -37,6 +38,7 @@ html, body, .container-fluid{
 
 .col-8.dice-number-text {
     font-size: 25px;
+    margin-bottom: 5px;
 }  
 
 .col-4.dice-top {
@@ -47,4 +49,143 @@ button.btn.btn-dark.btn-special {
     border-radius: .5rem;
     width: 100%;
     font-size: 25px;
+}
+
+.dice-selected{
+    border:2px solid gray; 
+    border-radius: 20px;
+}
+
+.rotate-dice-center {
+	-webkit-animation: rotate-center 2s linear infinite;;
+	        animation: rotate-center s linear infinite;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+.vertical-align-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-content {
+    width:inherit;
+    height:inherit;
+    margin: 0 auto;
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+@keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+}
+
+.history-img{
+    width: 25%;
+}
+
+/* 
+.error-hide{
+    display: none;
+}
+
+.error-show{
+    display: block;
+    color :Red;
+}
+
+input.disabled {
+    pointer-events:none;
+    color:#AAA;
+    background:#F5F5F5;
+    
+} */
+
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100vh;
+}
+
+.modal-cont{
+    text-align: center;
+}
+
+.modal-button{
+    width: 45%;
+}
+
+.history-dice{
+    width: 100%;
+    text-align: center;
+}
+
+.history-dice-con{
+    border : 1px solid black;
+    margin-top : 3px;
+}
+
+.history-text{
+    text-align:center;
+    font-size:20px;
+}
+
+.dice-cont{
+    width: 20%;
+    margin : 0 auto;
+}
+
+.result-numbers{
+    font-size:25px;
+    text-align: center;
+}
+
+.total-result{
+    text-align: center;
+    font-size:55px;
+}
+
+.about-app-title{
+    font-size:30px;
+}
+
+.about-version{
+    font-size:25px;
+}
+
+.about-developer{
+    font-size:20px;
+}
+
+.about-description{
+    font-size:16px;
+}
+
+.about-licence-con{
+    border : 2px solid black;
+    margin-top : 5px;
+}
+
+.about-licence{
+    font-size:20px;
 }
