@@ -10,62 +10,62 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row dice-height">
-            <div class="col-4 my-auto">
-                <img id="d4" class="dice-img" src="./src/img/d4.png" alt="">
+        <div class="row header">
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/d4.png" alt="">
             </div>
-            <div class="col-4 my-auto">
-                <img id="d6" class="dice-img" src="./src/img/d6.png" alt="">
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/d6.png" alt="">
             </div>
-            <div class="col-4 my-auto">
-                <img id="d8" class="dice-img" src="./src/img/d8.png" alt="">
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/d8.png" alt="">
+            </div>
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/d10.png" alt="">
+            </div>
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/d12.png" alt="">
+            </div>
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/d20.png" alt="">
+            </div>
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/d50.png" alt="">
+            </div>
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/d100.png" alt="">
+            </div>
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/plus.png" alt="">
+            </div>
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/plus.png" alt="">
+            </div>
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/plus.png" alt="">
+            </div>
+            <div class="col-4 dice-top">
+                <img class="dice-img" src="./src/img/plus.png" alt="">
             </div>
         </div>
-        <div class="row dice-height">
-            <div class="col-4 my-auto">
-                <img id="d10" class="dice-img" src="./src/img/d10.png" alt="">
-            </div>
-            <div class="col-4 my-auto">
-                <img id="d12" class="dice-img" src="./src/img/d12.png" alt="">
-            </div>
-            <div class="col-4 my-auto">
-                <img id="d20" class="dice-img" src="./src/img/d20.png" alt="">
-            </div>
-        </div>
-        <div class="row dice-height">
-            <div class="col-4 my-auto">
-                <img id="d50" class="dice-img" src="./src/img/d50.png" alt="">
-            </div>
-            <div class="col-4 my-auto">
-                <img id="d100" class="dice-img" src="./src/img/d100.png" alt="">
-            </div>
-            <div class="col-4 my-auto">
-                <img id="plus" class="dice-img" src="./src/img/plus.png" alt="">
-            </div>
-        </div>
-        <div class="row text-height mt-3">
-            <div class="col-6 my-auto">
-                <p class="info-text">Dice</p>
-            </div>
-            <div class="col-6 my-auto">
-                <select class="form-control form-control-lg">
+        <div class="row footer">
+            <div class="col-8 dice-number-text">Number Of Dice</div>
+            <div class="col-4">
+                <select class="form-control">
+                    <option value="1">1</option>
                 </select>
             </div>
-        </div>
-        <div class="row button-height">
-            <div class="col-12 my-auto">
-                <button id="roll" type="button" class="btn btn-dark btn-lg">Roll</button>
+            <div class="col-12 center">
+                <button type="button" class="btn btn-dark btn-special">Roll</button>
+            </div>
+            <div class="col-6 center btn-col-left">
+                <button type="button" class="btn btn-dark btn-special">About</button>
+            </div>
+            <div class="col-6 center btn-col-right">
+                <button type="button" class="btn btn-dark btn-special">History</button>
             </div>
         </div>
-        <div class="row title-height">
-            <div class="col-6 my-auto">
-                <button id="about" type="button" class="btn btn-dark btn-lg">About</button>
-            </div>
-            <div class="col-6 my-auto">
-                <button id="history" type="button" class="btn btn-dark btn-lg">History</button>
-            </div>                  
         </div>
-    </div>
 
     <div class="res modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="vertical-alignment-helper">
