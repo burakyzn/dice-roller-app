@@ -4,302 +4,47 @@ html, body, .container-fluid{
     padding-right: 0px;
 }
 
-.col-12{
+.center{
     text-align: center;
-    width: 100%;
 }
 
-.col-12 button{
-    width: 100%;
+.col-6.center.btn-col-left {
+    padding-right: 5px;
 }
 
-.col-6{
-    text-align: center;
-    width: 100%;
-}
-.col-6 button{
-    width: 100%;
-}
-
-.col-4{
-    text-align: center;
-    width: 100%;
-}
-
-.bottom-height{
-    height : 10%;
-    bottom : 10px;
-    position: absolute;
-}
-
-.dice-height{
-    height: 22%;
-}
-
-.text-height{
-    height: 10%;
-}
-
-.button-height{
-    height : 10%;
-    bottom:0;
+.col-6.center.btn-col-right {
+    padding-left: 5px;
 }
 
 .dice-img{
     width: 100%;
-    display: block;
 }
 
-.modal-cont{
-    text-align: center;
+.btn{
+    margin-top:8px;
 }
 
-.dice-cont{
-    width: 20%;
-    margin : 0 auto;
+.row.header {
+    height: calc( 100% - 170px);
 }
 
-.dice-selected{
-    border:2px solid gray; 
-    border-radius: 20px;
-}
-
-.rotate-dice-center {
-	-webkit-animation: rotate-center 2s linear infinite;;
-	        animation: rotate-center s linear infinite;
-}
-
-.vertical-alignment-helper {
-    display:table;
-    height: 100%;
+.row.footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-}
-.vertical-align-center {
-    display: table-cell;
-    vertical-align: middle;
-}
-.modal-content {
-    width:inherit;
-    height:inherit;
-    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
-@-webkit-keyframes rotate-center {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-@keyframes rotate-center {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
+.col-8.dice-number-text {
+    font-size: 25px;
+}  
+
+.col-4.dice-top {
+    margin: auto 0;
 }
 
-
-@media screen and (max-width: 767px) {
-    .info-text{
-        font-size:40px;
-    }
-    .app-title{
-        font-size:40px;
-    }
-    i{
-        font-size:70px;
-    }
-    .result-numbers{
-        font-size:25px;
-        text-align: center;
-    }
-    
-    .total-result{
-        text-align: center;
-        font-size:55px;
-    }
-
-    .about-app-title{
-        font-size:30px;
-    }
-    
-    .about-version{
-        font-size:25px;
-    }
-    
-    .about-developer{
-        font-size:20px;
-    }
-    
-    .about-description{
-        font-size:16px;
-    }
-    
-    .about-licence-con{
-        border : 2px solid black;
-        margin-top : 5px;
-    }
-    
-    .about-licence{
-        font-size:20px;
-    }
-    
-    .history-text{
-        text-align:center;
-        font-size:20px;
-    }
-
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .info-text{
-        font-size:60px;
-    }
-    .app-title{
-        font-size:60px;
-    }
-    i{
-        font-size:120px;
-    }
-    .result-numbers{
-        font-size:40px;
-        text-align: center;
-    }
-    
-    .total-result{
-        text-align: center;
-        font-size:80px;
-    }
-
-    .about-app-title{
-        font-size:70px;
-    }
-    
-    .about-version{
-        font-size:60px;
-    }
-    
-    .about-developer{
-        font-size:40px;
-    }
-    
-    .about-description{
-        font-size:35px;
-    }
-    
-    .about-licence-con{
-        border : 2px solid black;
-        margin-top : 5px;
-    }
-    
-    .about-licence{
-        font-size:50px;
-    }
-
-    .history-text{
-        font-size:40px;
-        text-align:center;
-    }
-}
-
-@media (min-width: 991px){
-    .info-text{
-        font-size:100px;
-    }
-    .app-title{
-        font-size:60px;
-    }
-    i{
-        font-size:120px;
-    }
-    .result-numbers{
-        font-size:40px;
-        text-align: center;
-    }
-    
-    .total-result{
-        text-align: center;
-        font-size:80px;
-    }
-
-    .about-app-title{
-        font-size:70px;
-    }
-    
-    .about-version{
-        font-size:60px;
-    }
-    
-    .about-developer{
-        font-size:40px;
-    }
-    
-    .about-description{
-        font-size:35px;
-    }
-    
-    .about-licence-con{
-        border : 2px solid black;
-        margin-top : 5px;
-    }
-    
-    .about-licence{
-        font-size:50px;
-    }
-    .history-text{
-        font-size:50px;
-        text-align:center;
-    }
-}
-
-.history-img{
-    width: 25%;
-}
-
-
-.error-hide{
-    display: none;
-}
-
-.error-show{
-    display: block;
-    color :Red;
-}
-
-input.disabled {
-    pointer-events:none;
-    color:#AAA;
-    background:#F5F5F5;
-    
-}
-
-.modal-full {
-    min-width: 100%;
-    margin: 0;
-}
-
-.modal-full .modal-content {
-    min-height: 100vh;
-}
-
-.modal-button{
-    width: 45%;
-}
-
-.history-dice{
+button.btn.btn-dark.btn-special {
+    border-radius: .5rem;
     width: 100%;
-    text-align: center;
+    font-size: 25px;
 }
-
-.history-dice-con{
-    border : 1px solid black;
-    margin-top : 3px;
-}
-
