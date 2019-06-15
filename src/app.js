@@ -2,9 +2,9 @@ const select_box = document.querySelector('.form-control');
 const result_modal_body = document.querySelector('.result');
 const container = document.querySelector('.container-fluid');
 const roll_button = document.querySelector('#roll');
-const plus = document.querySelector('#plus');
+// // const plus = document.querySelector('#plus');
 const new_dice_close = document.querySelector('.new-close');
-const error_message = document.querySelector('#error')
+// const error_message = document.querySelector('#error')
 const new_dice_text = document.querySelector('#newdice');
 const about_button = document.getElementById('about');
 const history_button = document.getElementById('history');
@@ -67,27 +67,27 @@ container.addEventListener('click',function(event){
         }
     }
 
-    if(event.target.id == 'plus'){
-        $('.set').modal('show');
-    }
+    // if(event.target.id == 'plus'){
+    //     $('.set').modal('show');
+    // }
 })
 
-new_dice_close.addEventListener('click',function(){
-    plus.id = 'd' + new_dice_text.value;
-    plus.src = './src/img/undefined.png';
-})
+// new_dice_close.addEventListener('click',function(){
+//     plus.id = 'd' + new_dice_text.value;
+//     plus.src = './src/img/undefined.png';
+// })
 
-new_dice_text.addEventListener('keyup',function(e){
-    if(new_dice_text.value > 100 || new_dice_text.value < 0){
-        error_message.classList.remove('error-hide');
-        error_message.classList.add('error-show');
-        $('.new-close').prop('disabled', true);
-    } else {
-        error_message.classList.add('error-hide');
-        error_message.classList.remove('error-show');
-        $('.new-close').prop('disabled', false);
-    }
-})
+// new_dice_text.addEventListener('keyup',function(e){
+//     if(new_dice_text.value > 100 || new_dice_text.value < 0){
+//         error_message.classList.remove('error-hide');
+//         error_message.classList.add('error-show');
+//         $('.new-close').prop('disabled', true);
+//     } else {
+//         error_message.classList.add('error-hide');
+//         error_message.classList.remove('error-show');
+//         $('.new-close').prop('disabled', false);
+//     }
+// })
 
 about_button.addEventListener('click',function(){
     $('.about').modal('show');
