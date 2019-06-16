@@ -36,16 +36,16 @@
                 <img id="d100" class="dice-img" src="./src/img/d100.png" alt="">
             </div>
             <div class="col-4 dice-top">
-                <img id="plus1" class="dice-img" src="./src/img/plus.png" alt="">
+                <img id="plus" class="dice-img" src="./src/img/plus.png" alt="">
             </div>
             <div class="col-4 dice-top">
-                <img id="plus2" class="dice-img" src="./src/img/plus.png" alt="">
+                <img id="plus" class="dice-img" src="./src/img/plus.png" alt="">
             </div>
             <div class="col-4 dice-top">
-                <img id="plus3" class="dice-img" src="./src/img/plus.png" alt="">
+                <img id="plus" class="dice-img" src="./src/img/plus.png" alt="">
             </div>
             <div class="col-4 dice-top">
-                <img id="plus4" class="dice-img" src="./src/img/plus.png" alt="">
+                <img id="plus" class="dice-img" src="./src/img/plus.png" alt="">
             </div>
         </div>
         <div class="row footer">
@@ -71,6 +71,7 @@
                 <div class="modal-content">
                     <div class="modal-body result"></div>
                     <div class="modal-footer">
+                        <p class="dice-info">Dice : <span class="dice-no">ZAR NO</span></p>
                         <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
                     </div>
                 </div>
@@ -83,7 +84,7 @@
             <div class="modal-dialog vertical-align-center">
                 <div class="modal-content">
                     <div class="modal-body modal-cont">
-                        <div class="result-numbers">Sides of new dice</div><div><input type="text" name="newdice" id="newdice" onkeypress="number_validation(event)"></div><div id="error" class="error-hide">Write a number between 0 and 100.</div>  
+                        <div class="result-numbers">Sides of new dice</div><div><input type="number" pattern="[0-9]*" inputmode="numeric" name="newdice" id="newdice"></div><div id="error" class="error-hide">Write a number between 0 and 100.</div>  
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default new-close" data-dismiss="modal">OK</button>
