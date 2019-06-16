@@ -165,33 +165,89 @@ input.disabled {
     font-size:55px;
 }
 
-.about-app-title{
-    font-size:30px;
-}
-
-.about-version{
-    font-size:25px;
-}
-
-.about-developer{
-    font-size:20px;
-}
-
-.about-description{
-    font-size:16px;
-}
-
-.about-licence-con{
-    border : 2px solid black;
-    margin-top : 5px;
-}
-
-.about-licence{
-    font-size:20px;
-}
-
 .dice-info{
     left: 10px;
     position: absolute;
     font-size: 30px;
+}
+
+@media only screen and (max-width: 360px){ 
+    .about-app-title{
+        font-size:35px;
+    }
+    
+    .about-version{
+        font-size:20px;
+    }
+    
+    .about-developer{
+        font-size:16px;
+    }
+    
+    .about-description{
+        font-size:16px;
+    }
+    
+    .about-licence-con{
+        border : 2px solid black;
+    }
+    
+    .about-licence{
+        font-size:21px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (min-width:361px) and (max-width: 410px){ 
+    .about-app-title{
+        font-size:40px;
+    }
+    
+    .about-version{
+        font-size:25px;
+    }
+    
+    .about-developer{
+        font-size:20px;
+    }
+    
+    .about-description{
+        font-size:20px;
+    }
+    
+    .about-licence-con{
+        border : 2px solid black;
+    }
+    
+    .about-licence{
+        font-size:30px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (min-width:411px){ 
+    .about-app-title{
+        font-size:47px;
+    }
+    
+    .about-version{
+        font-size:32px;
+    }
+    
+    .about-developer{
+        font-size:20px;
+    }
+    
+    .about-description{
+        font-size:22px;
+    }
+    
+    .about-licence-con{
+        border : 2px solid black;
+    }
+    
+    .about-licence{
+        font-size:40px;
+        font-weight: 400;
+    }
 }
