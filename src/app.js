@@ -71,7 +71,9 @@ container.addEventListener('click',function(event){
 
     plus = document.querySelector('#plus');
     if(event.target.id == 'plus'){
-        $('.set').modal('show');
+        if(event.target.classList[1] != 'dice-selected'){
+            $('.set').modal('show');
+        }
     }
 })
 
