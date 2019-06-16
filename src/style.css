@@ -39,6 +39,7 @@ html, body, .container-fluid{
 .col-8.dice-number-text {
     font-size: 25px;
     margin-bottom: 5px;
+    font-weight: 400;
 }  
 
 .col-4.dice-top {
@@ -101,7 +102,7 @@ button.btn.btn-dark.btn-special {
     width: 25%;
 }
 
-/* 
+
 .error-hide{
     display: none;
 }
@@ -116,7 +117,7 @@ input.disabled {
     color:#AAA;
     background:#F5F5F5;
     
-} */
+}
 
 .modal-full {
     min-width: 100%;
@@ -188,4 +189,10 @@ input.disabled {
 
 .about-licence{
     font-size:20px;
+}
+
+.dice-info{
+    left: 10px;
+    position: absolute;
+    font-size: 30px;
 }
