@@ -9,6 +9,7 @@ const about_button = document.getElementById('about');
 const history_button = document.getElementById('history');
 const clear_button = document.querySelector('.clear');
 const modal_history = document.querySelector('.modal-history');
+const dice_no = document.querySelector('.dice-no');
 var lastSelectedID = '';
 var selectedID = '';
 var result = '';
@@ -39,6 +40,7 @@ container.addEventListener('click',function(event){
     }
 
     if(event.target.id == 'roll'){
+        dice_no.innerHTML = selectedID;
         result_modal_body.innerHTML = '<div class="dice-cont"><img class="rotate-dice-center" style="width: 100%;" src="./src/img/dice.png"></div>'
         $('.res').modal('show');
         if(selectedID != ''){
