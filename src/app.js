@@ -10,6 +10,7 @@ const history_button = document.getElementById('history');
 const clear_button = document.querySelector('.clear');
 const modal_history = document.querySelector('.modal-history');
 const dice_no = document.querySelector('.dice-no');
+var dice_arr = ['4','6','8','10','12','20','50','100'];
 var lastSelectedID = '';
 var selectedID = '';
 var result = '';
@@ -78,16 +79,20 @@ container.addEventListener('click',function(event){
 })
 
 new_dice_close.addEventListener('click',function(){
-    plus.id = 'd' + new_dice_text.value;
-    plus.src = './src/img/undefined.png';
-    new_dice_text.value = '';
-
-    plus.classList.add('dice-selected');
-    lastSelectedID = selectedID;
-    selectedID = plus.id;
-    
-    if(lastSelectedID != ''){
-        document.querySelector('#' + lastSelectedID).classList.remove('dice-selected');
+    if(dice_arr.join('').indexOf(new_dice_text.value) == -1){
+        plus.id = 'd' + new_dice_text.value;
+        plus.src = './src/img/undefined.png';
+        dice_arr.push(new_dice_text.value);
+        new_dice_text.value = '';
+        
+        plus.classList.add('dice-selected');
+        lastSelectedID = selectedID;
+        selectedID = plus.id;
+        if(lastSelectedID != ''){
+            document.querySelector('#' + lastSelectedID).classList.remove('dice-selected');
+        }   
+    } else {
+        new_dice_text.value = '';
     }
 })
 
