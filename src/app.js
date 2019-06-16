@@ -28,7 +28,7 @@ $(document).ready(function () {
 });
 
 container.addEventListener('click',function(event){
-    if(event.target.id != '' && event.target.classList[0] != 'btn' && event.target.id != 'plus'){
+    if(event.target.id != '' && event.target.classList[0] != 'btn' && event.target.classList[1] != 'dice-selected' && event.target.id != 'plus'){
         document.querySelector('#' + event.target.id).classList.add('dice-selected');
 
         lastSelectedID = selectedID;
@@ -79,6 +79,14 @@ new_dice_close.addEventListener('click',function(){
     plus.id = 'd' + new_dice_text.value;
     plus.src = './src/img/undefined.png';
     new_dice_text.value = '';
+
+    plus.classList.add('dice-selected');
+    lastSelectedID = selectedID;
+    selectedID = plus.id;
+    
+    if(lastSelectedID != ''){
+        document.querySelector('#' + lastSelectedID).classList.remove('dice-selected');
+    }
 })
 
 new_dice_text.addEventListener('keyup',function(e){

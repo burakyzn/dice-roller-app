@@ -26,7 +26,6 @@ html, body, .container-fluid{
 
 .row.header {
     height: calc( 100% - 170px);
-    margin-top:2px
 }
 
 .row.footer {
