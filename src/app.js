@@ -79,7 +79,7 @@ container.addEventListener('click',function(event){
 })
 
 new_dice_close.addEventListener('click',function(){
-    if(dice_arr.join('').indexOf(new_dice_text.value) == -1){
+    if(dice_arr.join('-').indexOf(new_dice_text.value) == -1){
         plus.id = 'd' + new_dice_text.value;
         plus.src = './src/img/undefined.png';
         dice_arr.push(new_dice_text.value);
