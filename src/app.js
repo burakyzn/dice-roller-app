@@ -79,21 +79,24 @@ container.addEventListener('click',function(event){
 })
 
 new_dice_close.addEventListener('click',function(){
-    if(dice_arr.join('-').indexOf(new_dice_text.value) == -1){
-        plus.id = 'd' + new_dice_text.value;
-        plus.src = './src/img/undefined.png';
-        dice_arr.push(new_dice_text.value);
-        new_dice_text.value = '';
-        
-        plus.classList.add('dice-selected');
-        lastSelectedID = selectedID;
-        selectedID = plus.id;
-        if(lastSelectedID != ''){
-            document.querySelector('#' + lastSelectedID).classList.remove('dice-selected');
-        }   
-    } else {
-        new_dice_text.value = '';
+    for(var i=0;i<dice_arr.length;i++){
+        if(dice_arr[i] == new_dice_text.value){
+            new_dice_text.value;
+            return false
+        }
     }
+
+    plus.id = 'd' + new_dice_text.value;
+    plus.src = './src/img/undefined.png';
+    dice_arr.push(new_dice_text.value);
+    new_dice_text.value = '';
+        
+    plus.classList.add('dice-selected');
+    lastSelectedID = selectedID;
+    selectedID = plus.id;
+    if(lastSelectedID != ''){
+        document.querySelector('#' + lastSelectedID).classList.remove('dice-selected');
+    }   
 })
 
 new_dice_text.addEventListener('keyup',function(e){
