@@ -6,4 +6,7 @@ Simple dice roller application for fantastic role playing games.
 - Roll 0-50 times
 - Find your dice in the history 
 
-# [Google Play](https://play.google.com/store/apps/details?id=com.burakyazan.simplediceroller&hl=en)
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" 
+      alt="Download from Google Play" 
+      height="80">](https://play.google.com/store/apps/details?id=com.burakyazan.simplediceroller&hl=en)
+
