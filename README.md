@@ -13,7 +13,7 @@
 ### ⚙️Installation
 Copy this repository
 ```
-git clone https://github.com/burakyzn/dice-roller-app.git
+$ git clone https://github.com/burakyzn/dice-roller-app.git
 ```
 Follow the steps in this guide to create your cordova project.
 ```
@@ -22,7 +22,7 @@ https://cordova.apache.org/docs/en/latest/guide/cli/
 Copy the files from this repository into the www folder under your cordova project directory.
 In the cordova project directory, run cordova build.
 ```
-cordova build android
+$ cordova build android
 ```
 ### ⭐️ Show Your Support
 Please give a ⭐️ if this project helped you!
